@@ -70,7 +70,7 @@ const Task = ({ task, onUpdate, onToggle }) => {
           {/* Button to enter or exit editing mode */}
           {isEditing ? (
             <button
-              onClick={handleEditClick}
+              onClick={handleUpdate}
               className="p-2 rounded-md bg-green-800 text-white edit-btn"
             >
               Save
