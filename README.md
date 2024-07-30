@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# Todo-App
+A user-friendly Todo List Application for managing tasks with features like add, edit, search, and filter by date.
+# Todo List Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This Todo List Application is a simple and user-friendly tool to manage your tasks. The app allows users to add, edit, update, and mark tasks as completed. It also includes a search function and a date filter to help users find specific tasks easily.
 
-In the project directory, you can run:
+## System Design
 
-### `npm start`
+### Components
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. **App Component**
+   - The main component that handles the overall state of the application.
+   - Manages tasks, search queries, and the visibility of the task addition form.
+   - Utilizes `ToastContainer` for notifications.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. **TaskList Component**
+   - Renders a list of tasks passed down from the App component.
+   - Utilizes the `Task` component to display individual tasks.
 
-### `npm test`
+3. **Task Component**
+   - Represents an individual task.
+   - Allows for editing the task's title and description.
+   - Provides options to mark the task as completed or undo the completion.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Key Features
 
-### `npm run build`
+- **Add New Task**: Users can add new tasks with a title and description.
+- **Edit Task**: Users can edit existing tasks.
+- **Mark as Completed**: Users can mark tasks as completed or undo this action.
+- **Search**: Users can search for tasks by title or description.
+- **Date Filter**: Users can filter tasks by the date they were last updated.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Implementation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### App Component (`App.js`)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Manages the state for tasks, search query, new task form inputs, and expansion state.
+- Fetches initial task data from `data.json`.
+- Provides functions to add, update, and toggle tasks.
+- Handles search and date filtering.
+- Toggles the visibility of the new task form.
 
-### `npm run eject`
+### TaskList Component (`TaskList.js`)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Receives the list of tasks from the App component.
+- Renders each task using the `Task` component.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Task Component (`Task.js`)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Manages its own state for editing and expanding task details.
+- Provides input fields for editing task title and description.
+- Handles task update and toggle actions.
+- Displays the task's title, description, and last updated timestamp.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Setup and Run the Application
 
-## Learn More
+### Prerequisites
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Node.js (v14 or higher)
+- npm (v6 or higher)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Instructions
 
-### Code Splitting
+1. **Clone the Repository**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+   ```sh
+   git clone https://github.com/HussainAhmad21200612/Todo-App.git
+   cd todo-app
+   ```
 
-### Analyzing the Bundle Size
+2. **Install Dependencies**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```sh
+   npm install
+   ```
 
-### Making a Progressive Web App
+3. **Run the Application**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```sh
+   npm start
+   ```
 
-### Advanced Configuration
+   The application will be available at `http://localhost:3000`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+### Folder Structure
 
-### Deployment
+```
+Todo-App/
+│
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── components/
+│   │   ├── Task.js
+│   │   └── TaskList.js
+│   ├── data.json
+│   ├── App.css
+│   ├── App.js
+│   └── index.js
+├── package.json
+└── README.md
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Notes
 
-### `npm run build` fails to minify
+- The application uses React for the front-end and React Toastify for notifications.
+- Make sure to customize `data.json` with your initial tasks.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
