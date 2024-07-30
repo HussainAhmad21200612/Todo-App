@@ -67,7 +67,7 @@ This Todo List Application is a simple and user-friendly tool to manage your tas
 
    ```sh
    git clone https://github.com/HussainAhmad21200612/Todo-App.git
-   cd todo-app
+   cd Todo-App
    ```
 
 2. **Install Dependencies**
