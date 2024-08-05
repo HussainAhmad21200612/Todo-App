@@ -87,6 +87,8 @@ function App() {
 
   // Function to toggle the form expansion state
   const handleToggleExpand = () => {
+    setNewTaskTitle("");
+    setNewTaskDescription("");
     setIsExpanded(!isExpanded);
   };
 
