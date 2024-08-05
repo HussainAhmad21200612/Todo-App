@@ -4,7 +4,7 @@ A user-friendly Todo List Application for managing tasks with features like add,
 
 ## Overview
 
-This Todo List Application is a simple and user-friendly tool to manage your tasks. The app allows users to add, edit, update, and mark tasks as completed. It also includes a search function and a date filter to help users find specific tasks easily.
+Todo List Application is an application to manage one's tasks. The app allows users to add, edit, update, filter and mark tasks as complete. It includes search functionality and date filters that help users find specific tasks easily.
 
 ## System Design
 
@@ -12,11 +12,11 @@ This Todo List Application is a simple and user-friendly tool to manage your tas
 
 1. **App Component**
    - The main component that handles the overall state of the application.
-   - Manages tasks, search queries, and the visibility of the task addition form.
+   - Manages tasks, search queries, and the visibility of the task addition section using a toggle button.
    - Utilizes `ToastContainer` for notifications.
 
 2. **TaskList Component**
-   - Renders a list of tasks passed down from the App component.
+   - Renders a list of tasks that have been added.
    - Utilizes the `Task` component to display individual tasks.
 
 3. **Task Component**
@@ -26,11 +26,11 @@ This Todo List Application is a simple and user-friendly tool to manage your tas
 
 ### Key Features
 
-- **Add New Task**: Users can add new tasks with a title and description.
-- **Edit Task**: Users can edit existing tasks.
-- **Mark as Completed**: Users can mark tasks as completed or undo this action.
-- **Search**: Users can search for tasks by title or description.
-- **Date Filter**: Users can filter tasks by the date they were last updated.
+- **Add New Task**: The users can add new tasks with a title and description.
+- **Edit Task**: The users can edit existing tasks.
+- **Mark as Completed**: The users mark tasks as completed.
+- **Search**: The users can filter tasks according to a title or description.
+- **Date Filter**: The users can filter tasks according to a date.
 
 ## Implementation
 
@@ -103,9 +103,5 @@ Todo-App/
 ├── package.json
 └── README.md
 ```
-
-### Notes
-
-- The application uses React for the front-end and React Toastify for notifications.
-- Make sure to customize `data.json` with your initial tasks.
+The application uses React for the front-end and React Toastify for notifications.
 
