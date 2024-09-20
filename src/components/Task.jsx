@@ -87,6 +87,13 @@ const Task = ({ task, onUpdate, onToggle }) => {
               Edit
             </button>
           )}
+          {/* Delete button with trash icon */}
+          <button
+            onClick={handleDeleteClick}
+            className="p-2 rounded-md bg-red-600 text-white flex items-center justify-center"
+          >
+            <TrashIcon className="h-5 w-5" /> {/* Trash icon */}
+          </button>
         </div>
       </div>
       {/* Conditional rendering of task details */}
